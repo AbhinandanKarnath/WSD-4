@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+	<title>XML-Js</title>
+
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #7ce2af
+		}
+
+		th {
+			background-color: #7c0f65;
+			color: white;
+		}
+
+		.button {
+			position: relative;
+			text-align: center;
+			padding: 20px;
+			border: 4px solid rgb(55, 12, 211);
+			background: rgba(20, 192, 4, 0.5);
+			color: rgb(230, 36, 78);
+			outline: none;
+			border-radius: 30px;
+			font-size: 30px;
+			width: 500px;
+
+		}
+
+		.button:hover {
+			color: black;
+			background: white;
+		}
+	</style>
+	<script>
+		function loadXMLDoc() {
+			let xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function () {
+
+				// Request finished and response 
+				// is ready and Status is "OK"
+				if (this.readyState == 4 && this.status == 200) {
+					storeDetails(this);
+				}
+			};
+
+			// employee.xml is the external xml file
+			xmlhttp.open("GET", "products.xml", true);
+			xmlhttp.send();
+		}
+
+		function storeDetails(xml) {
+			let i;
+			let xmlDoc = xml.responseXML;
+			let table =
+				`<tr><th>Product name</th><th>Prize</th>
+					<th>quantity</th><th>discount</th><th>description</th>
+					<th>product_code</th><th>product_from</th>
+				</tr>`;
+			let x = xmlDoc.getElementsByTagName("product");
+
+			// Start to fetch the data by using TagName 
+            alert(x.length)
+			for (i = 0; i < x.length; i++) {
+				table += "<tr><td>" +
+                    
+					x[i].getElementsByTagName("name")[0]
+						.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("prize")[0]
+						.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("quantity")[0]
+						.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("discount")[0]
+						.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("description")[0]
+						.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("product_code")[0]
+						.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("product_from")[0]
+						.childNodes[0].nodeValue + "</td></tr>";
+			}
+
+			// Print the xml data in table form
+			document.getElementById("id").innerHTML = table;
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		<button type="button" class="button" onclick="loadXMLDoc()">
+			Get Product Details
+		</button>
+	</center>
+
+	<br><br>
+	<table id="id"></table>
+</body>
+
+</html>

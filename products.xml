@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE products SYSTEM "product.dtd"[
+    <!ENTITY rice SYSTEM "Red Rice">
+    <!-- <!ENTITY cost SYSTEM "50">
+    <!ENTITY qty SYSTEM "200">
+    <!ENTITY image SYSTEM "https://unsplash.com/photos/gray-and-blue-open-signage-c9FQyqIECds">
+    <!ENTITY dtn SYSTEM "10">
+    <!ENTITY pcode SYSTEM "1001">
+    <!ENTITY desc SYSTEM "Malnad fresh organically grown rice">
+    <!ENTITY from SYSTEM "Chikkamangaluru"> -->
+]>
+<?xml-stylesheet type="text/xsl" href="products.xsl"?>
+
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="products.xsd">
+    
+    <product category="rice">
+        <name>rice</name>
+        <price>cost;</price>
+        <quantity>qty;</quantity>
+        <product_image>https://unsplash.com/photos/a-wooden-scoop-of-rice-on-top-of-a-pile-of-rice-E85Jb-wW7Tg</product_image>
+        <discount>3</discount>
+        <product_code>42</product_code>
+        <description>vgad </description>
+        <product_from>fasfs</product_from>
+    </product>
+
+    <product category="oil">
+        <name>Groundnut oil</name>
+        <price>50rs</price>
+        <quantity>100</quantity>
+        <product_image>https://unsplash.com/photos/clear-glass-cruet-bottle-uOBApnN_K7w</product_image>
+        <discount>20</discount>
+        <product_code>1002</product_code>
+        <description>good quality rice</description>
+        <product_from>Udupi</product_from>
+    </product>
+
+    <product category="Vegetables">
+        <name>tomato</name>
+        <price>60rs</price>
+        <quantity>20kg</quantity>
+        <product_image>https://unsplash.com/photos/closeup-photo-of-red-tomato-against-black-background-S-de8PboZmI</product_image>
+        <discount>5</discount>
+        <product_code>1003</product_code>
+        <description>Fresh home grown tomato</description>
+        <product_from>sriengeri</product_from>
+    </product>
+
+    <product category="Fruits">
+        <name>Apple</name>
+        <price>140rs</price>
+        <quantity>10</quantity>
+        <product_image>https://unsplash.com/photos/a-stack-of-apples-sitting-on-top-of-each-other-wZhOsRo-dj0</product_image>
+        <discount>3</discount>
+        <product_code>1004</product_code>
+        <description>sweet apple</description>
+        <product_from>bengaluru</product_from>
+    </product>
+</products>

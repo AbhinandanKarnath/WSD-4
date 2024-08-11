@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="library.xsd">
+    <book id="1">
+        <title>Introduction to Algorithms</title>
+        <author>Thomas H. Cormen</author>
+        <genre>Computer Science</genre>
+        <year>2009</year>
+        <isbn>9780262033848</isbn>
+        <copies>3</copies>
+    </book>
+    <book id="2">
+        <title>The Pragmatic Programmer</title>
+        <author>Andrew Hunt</author>
+        <genre>Software Development</genre>
+        <year>1999</year>
+        <isbn>9780201616224</isbn>
+        <copies>5</copies>
+    </book>
+    <book id="3">
+        <title>Clean Code</title>
+        <author>Robert C. Martin</author>
+        <genre>Software Engineering</genre>
+        <year>2008</year>
+        <isbn>9780132350884</isbn>
+        <copies>2</copies>
+    </book>
+</library>
